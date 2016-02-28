@@ -4,21 +4,21 @@
 button { border: 0 none; }
 
 button.demo {
-	background-color: @keyblue;
-	border-top: 1px solid @lightkeyblue;
+	background-color: @key;
+	border-top: 1px solid @keylight;
 	border-bottom: 1px solid @transblack;
 	.box-shadow(
 		inset 0 0 20px 5px @transblack, 
-		inset 0 0 0 0 @lightkeyblue,
+		inset 0 0 0 0 @keylight,
 		0 2px 4px 0 @lightblack);
-	text-shadow: -1px -1px 0 black, 1px 1px 0 @lightkeyblue;
+	text-shadow: -1px -1px 0 black, 1px 1px 0 @keylight;
 
 	color: white;
 	
 	.slowtrans;
 
 	i { 
-		color: @keyblue;
+		color: @key;
 		font-size: 85px;
 		text-shadow: 0 0 0 transparent;
 		vertical-align: bottom;
@@ -28,18 +28,18 @@ button.demo {
 
 }
 	button.demo:hover {
-//		background-color: @lightkeyblue;
+//		background-color: @keylight;
 		.box-shadow(
 			inset 0 0 20px 5px @transblack, 
-			inset 0px 10px 50px 0 fadeout(@lightkeyblue, 70%),
+			inset 0px 10px 50px 0 fadeout(@keylight, 70%),
 			0 2px 4px 0 @lightblack);
-		 text-shadow: -1px -1px 0 black, 1px 1px 0 @keygreen;
+		 text-shadow: -1px -1px 0 black, 1px 1px 0 @key;
 		
 		.slowtrans;
 
 		i {
 			color: white;
-			text-shadow: 0 0 4px @keygreen;
+			text-shadow: 0 0 4px @key;
 			.fasttrans;
 		}
 	}
@@ -66,7 +66,7 @@ button.medium {
 
 	i { font-size: 50px; top: -6px; }
 }
-button.green:hover { background-color: @keygreen; .fasttrans; }
+button.green:hover { background-color: @green; .fasttrans; }
 button.small {
 	.column(2);
 	.push(2);
