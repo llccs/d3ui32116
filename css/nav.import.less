@@ -1,19 +1,78 @@
 
 
-//NAV MENUS AND LINKS
+//LIST OF SLIDES
 
-.nav { position: fixed; height: 50px; z-index: 1000;}
-
-.nav a {
-	display: block;
-	float: left;
-	.two;
-	height: 100%;
-	.slowtrans;
+.navlist { 
+	position: absolute; 
+		top: -100px; 
+	height: 110px; 
 	z-index: 1000;
+	background: transparent none;
+	.fasttrans;
+	
+	 a {
+		display: block;
+		float: left;
+		height: 100%;
+		margin: 0 auto;
+		padding: 0 25px;
+		.slowtrans;
+		z-index: 1000;
+		font-weight: bold;
+	 	font-size: 1em;
+	 	color: @key;
+	 }
+		a:hover {
+			color: @contrast;
+			.fasttrans;
+		}
+		
+	li { 
+		width: 20px;
+		display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: stretch;
+			flex-grow: 1;
+	}	
 }
-	.nav a:hover {
+	.navlist:hover, .navlist:active {
+		position: absolute;
+			top: 0px;
+	
 		.fasttrans;
+	}
+
+
+//BACK AND FORTH
+#prev, #next {
+	position: fixed;
+	height: 100%;
+	width: 100px;
+	.fasttrans;
+
+	a { 
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+	#prev {
+		
+	}
+		#prev:hover {
+			.box-shadow(inset 10px 0 10px 0 @lightblack);
+		}
+	#next {
+		
+	}
+		#next:hover {
+			.box-shadow(inset -10px 0 10px 0 @lightblack);
+		}
+	
+	#prev:hover, #next:hover {
+		.slowtrans;
 	}
 
 
